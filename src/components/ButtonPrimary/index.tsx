@@ -8,7 +8,7 @@ export type Props = {
 
 const ButtonPrimary: React.FC<Props> = ({ title }) => {
   return (
-    <S.Container>
+    <S.Container activeOpacity={0.5}>
       <S.Title>{title}</S.Title>
     </S.Container>
   );
