@@ -29,4 +29,5 @@ export const Subtitles = styled.Text`
   font-family: ${({ theme }) => theme.fontFamily.regular};
   font-size: ${RFValue(16)}px;
   color: ${({ theme }) => theme.colors.secondaryMedium};
+  margin-top: ${RFValue(30)}px;
 `;
