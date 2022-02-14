@@ -24,15 +24,15 @@ const BarCodeReader: React.FC = () => {
       />
 
       <S.Title>
-        Aponte a câmera para o{'\n'}
-        código de barras e aguarde.
+        Point the camera at the{'\n'}
+        barcode and wait.
       </S.Title>
 
       <Guidelines>
         <S.ContentCamera />
       </Guidelines>
 
-      <S.Subtitle>Código de Barras</S.Subtitle>
+      <S.Subtitle>Barcode</S.Subtitle>
     </S.Container>
   );
 };
