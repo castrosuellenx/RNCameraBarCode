@@ -25,21 +25,6 @@ export const Image = styled.Image.attrs({
   height: 50%;
 `;
 
-export const Button = styled.TouchableOpacity`
-  background-color: ${({ theme }) => theme.colors.secondaryMain};
-  margin-bottom: ${RFValue(30)}px;
-  padding-vertical: ${RFValue(10)}px;
-  padding-horizontal: ${RFValue(50)}px;
-  border-radius: ${RFValue(150)}px;
-  margin-top: ${RFValue(5)}px;
-`;
-
-export const ButtonText = styled.Text`
-  font-family: ${({ theme }) => theme.fontFamily.bold};
-  font-size: ${RFValue(25)}px;
-  color: ${({ theme }) => theme.colors.primaryMedium};
-`;
-
 export const Subtitles = styled.Text`
   font-family: ${({ theme }) => theme.fontFamily.regular};
   font-size: ${RFValue(16)}px;
