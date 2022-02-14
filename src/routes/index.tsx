@@ -5,13 +5,18 @@ import Home from '../screens/Home';
 import BarCodeReader from '../screens/BarCodeReader';
 import Result from '../screens/Result';
 
+export type ResultProps = {
+  barcodedata: string;
+  barcodetype: string;
+};
+
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace ReactNavigation {
     interface RootParamList {
       Home: undefined;
       BarCodeReader: undefined;
-      Result: undefined;
+      Result: ResultProps;
     }
   }
 }
