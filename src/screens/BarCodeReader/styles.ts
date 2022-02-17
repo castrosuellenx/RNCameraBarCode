@@ -1,14 +1,33 @@
+import { Dimensions } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 export const Container = styled.View`
   flex: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.colors.secondaryMain};
 `;
 
 export const StatusBar = styled.StatusBar``;
+
+export const WrapperOverlay = styled.View`
+  height: ${windowHeight}px;
+  width: ${windowWidth}px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+`;
+
+export const Content = styled.View`
+  height: ${windowHeight}px;
+  width: ${windowWidth}px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+`;
 
 export const Title = styled.Text`
   font-family: ${({ theme }) => theme.fontFamily.regular};
@@ -18,12 +37,12 @@ export const Title = styled.Text`
   margin-bottom: ${RFValue(30)}px;
 `;
 
-export const ContentCamera = styled.View`
+export const ContentGuide = styled.View`
   height: ${RFValue(250)}px;
   width: ${RFValue(250)}px;
   align-self: center;
   border-radius: ${RFValue(5)}px;
-  background-color: ${({ theme }) => theme.colors.secondaryMedium};
+  background-color: ${({ theme }) => theme.colors.secondaryMedium}40;
   position: absolute;
 `;
 

@@ -16,18 +16,20 @@ const BarCodeReader: React.FC = () => {
         backgroundColor={theme.colors.secondaryMain}
       />
 
-      <S.Title>
-        Point the camera at the{'\n'}
-        barcode and wait.
-      </S.Title>
+      <Camera />
 
-      <Guidelines>
-        <S.ContentCamera>
-          <Camera />
-        </S.ContentCamera>
-      </Guidelines>
+      <S.Content>
+        <S.Title>
+          Point the camera at the{'\n'}
+          barcode and wait.
+        </S.Title>
 
-      <S.Subtitle>Barcode</S.Subtitle>
+        <Guidelines>
+          <S.ContentGuide />
+        </Guidelines>
+
+        <S.Subtitle>Barcode</S.Subtitle>
+      </S.Content>
     </S.Container>
   );
 };
