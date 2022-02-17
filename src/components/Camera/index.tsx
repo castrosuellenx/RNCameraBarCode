@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { RNCamera } from 'react-native-camera';
+import { Dimensions } from 'react-native';
 
 const Camera: React.FC = () => {
   const { navigate } = useNavigation();
@@ -15,13 +16,14 @@ const Camera: React.FC = () => {
   return (
     <RNCamera
       style={{
-        height: '100%',
-        width: '100%',
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
       }}
       onBarCodeRead={({ data, type }) => {
         getBarCode(data, type);
       }}
       captureAudio={false}
+      type={RNCamera.Constants.Type.back}
     />
   );
 };
